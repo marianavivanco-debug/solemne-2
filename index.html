@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Memorice</title>
+<h1>Memorice</h1>
+<style>
+.carta{
+width: 80px;
+height: 80px;
+background: #cccccc;
+display: inline-flex;
+font-size: 40px;
+margin: 5px;
+}
+</style>
+</head>
+<body>
+<div id="c1" class="carta">?</div>
+<div id="c2" class="carta">?</div>
+<div id="c3" class="carta">?</div>
+<div id="c4" class="carta">?</div>
+<div id="c5" class="carta">?</div>
+<div id="c6" class="carta">?</div>
+<div id="c7" class="carta">?</div>
+<div id="c8" class="carta">?</div>
+<div id="c9" class="carta">?</div>
+<div id="c10" class="carta">?</div>
+<script>
+let valor1 = "A"; let valor2 = "D";
+let valor3 = "C"; let valor4 = "B";
+let valor5 = "B"; let valor6 = "E";
+let valor7 = "A"; let valor8 = "D";
+let valor9 = "C"; let valor10 = "E";
+let cartaMostrada = "";
+let idMostrada = "";
+function mostrarCarta(id, valor){
+let carta = document.getElementById(id);
+carta.innerText = valor;
+if(cartaMostrada === ""){
+cartaMostrada = valor;
+idMostrada = id;
+} else {
+if(cartaMostrada !== valor){
+carta.innerText = "?";
+document.getElementById(idMostrada).innerText = "?";
+}
+cartaMostrada = "";
+idMostrada = "";
+}
+}
+document.getElementById("c1").onclick = function(){ mostrarCarta("c1", valor1); }
+document.getElementById("c2").onclick = function(){ mostrarCarta("c2", valor2); }
+document.getElementById("c3").onclick = function(){ mostrarCarta("c3", valor3); }
+document.getElementById("c4").onclick = function(){ mostrarCarta("c4", valor4); }
+document.getElementById("c5").onclick = function(){ mostrarCarta("c5", vaor5); }
+document.getElementById("c6").onclick = function(){ mostrarCarta("c6", valor6); }
+document.getElementById("c7").onclick = function(){ mostrarCarta("c7", valor7); }
+document.getElementById("c8").onclick = function(){ mostrarCarta("c8", valor8); }
+document.getElementById("c9").onclick = function(){ mostrarCarta("c9", valor9); }
+document.getElementById("c10").onclick = function(){ mostrarCarta("c10", valor10); }
+</script>
+</body>
+</html>
